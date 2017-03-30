@@ -10,6 +10,6 @@ A Wagtail sample application for demo purposes.
 
 ## Usage
 
-Run `make install` and create a superuser with `oython manage.py createsuperuser`.
+Run `make install` and create a superuser with `python manage.py createsuperuser`.
 
 Now check your site at `http:://localhost:8000` by running the command `python manage.py runserver`.
