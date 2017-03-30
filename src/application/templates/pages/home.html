@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for block in self.content_top %}
+    {{ block }}
+{% endfor %}
+{% for block in self.content %}
+    {{ block }}
+{% endfor %}
+{% endblock %}

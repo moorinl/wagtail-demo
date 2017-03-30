@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% block styles %}
+        <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+        {% endblock %}
+        {% block extra_styles %}{% endblock %}
+        <title>{% block title %}{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}{% endblock %}</title>
+    </head>
+    <body class="{% block body_class %}{% endblock body_class %}">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <h1>Wagtail Demo</h1>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+        {% block scripts %}
+        <script src="{% static "/js/jquery.min.js" %}"></script>
+        <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+        {% endblock %}
+        {% block extra_scripts %}{% endblock %}
+    </body>
+</html>

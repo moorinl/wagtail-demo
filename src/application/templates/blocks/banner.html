@@ -1,0 +1,12 @@
+{% load wagtailimages_tags %}
+
+{% image self.image fill-200x120-c10 as img %}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ self.title }}
+    </div>
+    <div class="panel-body">
+        <img src="{{ img.url }}" width="100%" height="auto" alt="{{ img.alt }}" />
+    </div>
+</div>

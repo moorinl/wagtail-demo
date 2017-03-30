@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h2>{{ page.title }}</h2>
+    </div>
+</div>
+{% for block in self.content %}
+    {{ block }}
+{% endfor %}
+{% endblock %}
